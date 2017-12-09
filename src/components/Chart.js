@@ -43,7 +43,7 @@ static defaultProps ={
        options={{
          title:{
            display: this.props.displayTitle,
-           text: 'Largest Cities in Queens',
+           text: 'Largest Cities in Queens BAR CHART',
            fontSize:25,
            position: 'bottom'
          },
@@ -70,7 +70,7 @@ static defaultProps ={
        options={{
          title:{
            display: this.props.displayTitle,
-           text: 'Largest Cities in Queens',
+           text: 'Largest Cities in Queens LINE CHART',
            fontSize:25,
            position: 'bottom'
          },
@@ -97,7 +97,7 @@ static defaultProps ={
        options={{
          title:{
            display: this.props.displayTitle,
-           text: 'Largest Cities in Queens',
+           text: 'Largest Cities in Queens PIE CHART',
            fontSize:25,
            position: 'bottom'
          },
