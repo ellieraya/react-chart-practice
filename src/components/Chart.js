@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Bar, Line, Pie} from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
+import './Chart.css';
 
 class Chart extends Component{
   constructor (props){
@@ -37,34 +38,37 @@ static defaultProps ={
 }
   render() {
     return (
-      <div className= "chart">
-       <Bar
-        data={this.state.chartData}
-       options={{
-         title:{
-           display: this.props.displayTitle,
-           text: 'Largest Cities in Queens BAR CHART',
-           fontSize:25,
-           position: 'bottom'
-         },
-         legend: {
-            display: this.props.displayLegend,
-            position: this.props.legendPosition,
-          },
-          layout:{
-            padding:{
-              left: 50,
-              right: 0,
-              bottom:0,
-              top: 0,
+      <div className= "container chart">
+       <div class="row">
+         <Bar
+          data={this.state.chartData}
+         options={{
+           title:{
+             display: this.props.displayTitle,
+             text: 'Largest Cities in Queens BAR CHART',
+             fontSize:25,
+             position: 'bottom',
+           },
+           legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition,
+            },
+            layout:{
+              padding:{
+                left: 50,
+                right: 0,
+                bottom:0,
+                top: 0,
+              }
+            },
+            tooltips:{
+              enabled: true
             }
-          },
-          tooltips:{
-            enabled: true
-          }
 
-       }}
-       />
+         }}
+         />
+      </div>
+      <div className="row">
        <Line
         data={this.state.chartData}
        options={{
@@ -92,33 +96,36 @@ static defaultProps ={
 
        }}
        />
-       <Pie
-        data={this.state.chartData}
-       options={{
-         title:{
-           display: this.props.displayTitle,
-           text: 'Largest Cities in Queens PIE CHART',
-           fontSize:25,
-           position: 'bottom'
-         },
-         legend: {
-            display: this.props.displayLegend,
-            position: this.props.legendPosition,
-          },
-          layout:{
-            padding:{
-              left: 50,
-              right: 0,
-              bottom:0,
-              top: 0,
+       </div>
+       <div className="row">
+         <Pie
+          data={this.state.chartData}
+         options={{
+           title:{
+             display: this.props.displayTitle,
+             text: 'Largest Cities in Queens PIE CHART',
+             fontSize:25,
+             position: 'bottom'
+           },
+           legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition,
+            },
+            layout:{
+              padding:{
+                left: 50,
+                right: 0,
+                bottom:0,
+                top: 0,
+              }
+            },
+            tooltips:{
+              enabled: true
             }
-          },
-          tooltips:{
-            enabled: true
-          }
 
-       }}
-       />
+         }}
+         />
+        </div>
       </div>
     )
   }
